@@ -1,0 +1,23 @@
+
+exports.typeDefs=`
+type Query{
+greeting: String
+
+type Course{
+        _id: ID
+        title: String!
+        category: String!
+        description: String!
+        technologies: String!
+        createdDate: String!
+        link: String
+        plataform: String
+}
+
+
+type Mutation{
+
+
+                addCourse(title: String!, description: String!, category: String!, technologies: String!, link: String, plataform:String ): Course                                            
+        }
+` ;

@@ -1,0 +1,24 @@
+
+const Course=require('./../models/Course');
+
+exports.resolvers={
+
+Query:{
+        greeting:()=>'hola mundo'
+        },
+
+Mutation:{
+    addCourse: async (root, { title, description, category, techonologies, link, plataform }, { Course }) => {
+        const newCourse = await new Course({
+            title,
+            description,
+            category,
+	    technologies,
+		link,
+		plataform
+	}).save();
+        return newCourse;
+
+}
+
+}}
